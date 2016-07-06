@@ -13,14 +13,18 @@
 
 class Title : public cocos2d::Layer
 {
+    std::string imagePath = "DataFile/TitleImagePath.txt";
+    int imageValue;
+    cocos2d::Sprite* bgSprite;
+    
 public:
     
+    int sceneNumber = 0;
     static cocos2d::Scene* CreateScene();
-    
-    virtual bool init() override;
-    
+    bool init();
+    void SetImageInfo();
     CREATE_FUNC(Title)
     
 };
 
-#endif /* Title_hpp */
+#endif /* Title_hpp */.
